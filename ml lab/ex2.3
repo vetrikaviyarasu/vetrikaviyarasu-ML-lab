@@ -1,0 +1,20 @@
+import numpy as np
+
+def mean_absolute_error(y_true, y_pred):
+    # Calculate the number of observations
+    n = len(y_true)
+    
+    # Calculate the Mean Absolute Error
+    var = sum(abs(y_true[i] - y_pred[i]) for i in range(n)) / n
+    return var
+
+# Example actual and predicted values
+actual = [2, 4, 6, 8, 10]
+predicted = [1.5, 4.2, 5.8, 7.5, 9.8]
+
+# Calculate the MAE
+var_res = mean_absolute_error(actual, predicted)
+
+# Output the result
+print("Reg No: 111622201118")
+print(f"MAE: {var_res}")
